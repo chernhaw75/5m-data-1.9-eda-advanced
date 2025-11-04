@@ -25,7 +25,7 @@ returns = pd.DataFrame({
 Answer:
 
 ```python
-
+returns["MSFT"].cov(returns["IBM"])
 ```
 
 ### Question 2
@@ -45,7 +45,8 @@ df = pd.DataFrame({
 Answer:
 
 ```python
-
+melted = pd.melt(df, id_vars=['A'], value_vars=['B', 'C'], 
+                  var_name='Variable', value_name='Value')
 ```
 
 ### Question 3
@@ -63,10 +64,13 @@ data = pd.Series(np.random.rand(len(dates)), index=dates)
 Answer:
 
 ```python
+result = data["2023-01-05":"2023-01-15"]
+
+print(result)
 
 ```
 
 ## Submission
 
 - Submit the URL of the GitHub Repository that contains your work to NTU black board.
-- Should you reference the work of your classmate(s) or online resources, give them credit by adding either the name of your classmate or URL.
+- Should you reference the work of your classmate(s) or online resources, give them credit by adding either the name of your classmate or URL
